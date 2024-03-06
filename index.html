@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bu Web Site Discord İçindir</title>
+    <style>
+        body {
+            background-color: rgb(35, 35, 35);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bu Web Site Discord İçindir</h1>
+
+    <p id="countdownText">Yönlendiriliyor... Kalan süre: 5 saniye</p>
+
+    <script>
+        var countdown = 5;
+        var countdownInterval = setInterval(function() {
+            countdown--;
+            document.getElementById("countdownText").innerText = "Yönlendiriliyor... Kalan süre: " + countdown + " saniye";
+            if(countdown <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = "https://kulysf.github.io";
+            }
+        }, 1000); // 1 saniye aralıklarla geri sayım yap
+    </script>
+</body>
+</html>
